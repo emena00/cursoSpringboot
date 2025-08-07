@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: erick
+      changes:
+        - createTable:
+            tableName: productos
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: nombre
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: descripcion
+                  type: VARCHAR(255)
+              - column:
+                  name: precio
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cantidad
+                  type: INT
